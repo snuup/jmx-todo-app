@@ -1,4 +1,4 @@
-import { updateview, rebind, mount, loggedmethods } from 'jmx'
+import { updateview, rebind } from 'jmx'
 import { m, Todo } from './model'
 
 class Controller {
@@ -35,17 +35,14 @@ class Controller {
 
     keyUp(ev: KeyboardEventInput) {
 
-        switch (ev.key) {
+        const { key, target: { value } } = ev
+        const i = m.editingItem!
+
+        switch (key) {
 
             case "Enter":
-                if (!m.editingItem) return
-                let text = ev.target.value
-                let i = m.editingItem
-                if (text.length) {
-                    i.text = text
-                } else {
-                    m.items = m.items.filter(x => x !== i)
-                }
+                i.text = value
+                if (!value) m.items = m.items.filter(x => x !== i)
                 this.endEdit(ev)
                 break
 
@@ -57,7 +54,7 @@ class Controller {
 
     setCompleted(ev, item: Todo): void {
         item.completed = (ev.target as HTMLInputElement).checked
-        let li = (ev.target as HTMLElement).closest("li")
+        const li = (ev.target as HTMLElement).closest("li")
         updateview(".footer", li)
     }
 

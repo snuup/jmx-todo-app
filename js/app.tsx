@@ -9,7 +9,7 @@ const Header = <header class="header">
     <input class="new-todo" onkeydown={c.addItem} placeholder="What needs to be done?" autofocus />
 </header>
 
-let Footer = <footer class="footer">
+const Footer = <footer class="footer">
     <span class="todo-count">
         <strong>{m.activecount}</strong> {m.activecount === 1 ? "item" : "items"} left
     </span>
@@ -23,9 +23,9 @@ let Footer = <footer class="footer">
     </When>
 </footer>
 
-let Item = ({ item: item }: { item: Todo }) => {
-    let editing = m.editingItem == item
-    let completed = item.completed
+const Item = ({ item: item }: { item: Todo }) => {
+    const editing = m.editingItem == item
+    const completed = item.completed
     return <li class={cc({ completed, editing })} >
 
         <div class="view">
@@ -51,7 +51,7 @@ let Item = ({ item: item }: { item: Todo }) => {
     </li>
 }
 
-let Main = <main class="main">
+const Main = <main class="main">
     <div class="toggle-all-container">
         <input class="toggle-all" id="toggle-all" type="checkbox" onchange={c.toggleAllItems} checked={m.allarecompleted} />
         <label for="toggle-all">Mark all as complete</label>
@@ -62,7 +62,7 @@ let Main = <main class="main">
     <Footer />
 </main>
 
-export let App =
+export const App =
     <section class="todoapp">
         <Header />
         <Main />

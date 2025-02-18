@@ -11,12 +11,11 @@ export type Todo = {
 class Model {
 
     items = [
-        { id: "id1", text: "hasentext", completed: false },
-        { id: "id2", text: "mausetext", completed: false },
-        { id: "id3", text: "der osterhase kommt bald", completed: false }
+        // { id: "id1", text: "hasentext", completed: false },
+        // { id: "id2", text: "mausetext", completed: false },
+        // { id: "id3", text: "der osterhase kommt bald", completed: false }
     ] as Todo[]
 
-    // ui mode
     editingItem = null as Todo | null
     filter = "all" as Filter
 
@@ -30,10 +29,7 @@ class Model {
 
     get completeditems() { return this.items.filter(t => t.completed) }
     get activeitems() { return this.items.filter(t => !t.completed) }
-
-    get completedcount() { return this.completeditems.length }
     get activecount() { return this.activeitems.length }
-
     get allarecompleted() { return m.items.every(c => c.completed) }
     get anycompleted() { return this.items.some(t => t.completed) }
 }

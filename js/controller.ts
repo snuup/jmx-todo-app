@@ -11,16 +11,12 @@ class Controller {
     }
 
     setroute() {
-        switch (window.location.hash) {
-            case "#/active":
-                m.filter = "active"
-                break
-            case "#/completed":
-                m.filter = "completed"
-                break
-            default:
-                m.filter = "all"
+        let routes: Record<string, Filter> =
+        {
+            "#/active": "active",
+            "#/completed": "completed"
         }
+        m.filter = routes[window.location.hash] ?? "all"
         updateview(".main")
     }
 
@@ -68,7 +64,7 @@ class Controller {
     }
 
     toggleAllItems(ev: Event) {
-        const checked = (ev.target as HTMLInputElement).checked;
+        const checked = (ev.target as HTMLInputElement).checked
         m.items.forEach(t => t.completed = checked)
         updateview("ul")
     }

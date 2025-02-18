@@ -4,7 +4,7 @@ import { m, type Todo } from './model'
 import 'todomvc-app-css/index.css'
 import 'todomvc-common/base.css'
 
-let Header = <header class="header">
+const Header = <header class="header">
     <h1>todos</h1>
     <input class="new-todo" onkeydown={c.addItem} placeholder="What needs to be done?" autofocus />
 </header>

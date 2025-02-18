@@ -8,17 +8,17 @@ export type Todo = {
     completed: boolean
 }
 
-export const m = {
+class Model {
 
-    items: [
+    items = [
         { id: "id1", text: "hasentext", completed: false },
         { id: "id2", text: "mausetext", completed: false },
         { id: "id3", text: "der osterhase kommt bald", completed: false }
-    ] as Todo[],
+    ] as Todo[]
 
     // ui mode
-    editingItem: null as Todo | null,
-    filter: "all" as Filter,
+    editingItem = null as Todo | null
+    filter = "all" as Filter
 
     get filtereditems() {
         switch (m.filter) {
@@ -26,16 +26,18 @@ export const m = {
             case "active": return this.activeitems
             case "completed": return this.completeditems
         }
-    },
+    }
 
-    get completeditems() { return this.items.filter(t => t.completed) },
-    get activeitems() { return this.items.filter(t => !t.completed) },
+    get completeditems() { return this.items.filter(t => t.completed) }
+    get activeitems() { return this.items.filter(t => !t.completed) }
 
-    get completedcount() { return this.completeditems.length },
-    get activecount() { return this.activeitems.length },
+    get completedcount() { return this.completeditems.length }
+    get activecount() { return this.activeitems.length }
 
-    get allarecompleted() { return m.items.every(c => c.completed) },
+    get allarecompleted() { return m.items.every(c => c.completed) }
     get anycompleted() { return this.items.some(t => t.completed) }
 }
 
-mount({ m })
+export let m = new Model()
+
+//mount({ m })

@@ -1,4 +1,4 @@
-import { cc, JMXComp, jsx, patch, When } from "jmx"
+import { cc, jsx, patch, When } from "jmx"
 import { c } from './controller'
 import { m, type Todo } from './model'
 import 'todomvc-app-css/index.css'
@@ -10,21 +10,17 @@ let Header = <header class="header">
 </header>
 
 let Footer = <footer class="footer">
-
     <span class="todo-count">
         <strong>{m.activecount}</strong> {m.activecount === 1 ? "item" : "items"} left
     </span>
-
     <ul class="filters">
         <li><a class={cc({ selected: m.filter == "all" })} href="#/">All</a></li>
         <li><a class={cc({ selected: m.filter == "active" })} href="#/active">Active</a></li>
         <li><a class={cc({ selected: m.filter == "completed" })} href="#/completed">Completed</a></li>
     </ul>
-
     <When cond={m.anycompleted}>
         <button class="clear-completed" onclick={c.removeCompletedItems}>Clear completed</button>
     </When>
-
 </footer>
 
 let Item = ({ item: item }: { item: Todo }) => {
@@ -34,7 +30,7 @@ let Item = ({ item: item }: { item: Todo }) => {
 
         <div class="view">
             <input class="toggle" type="checkbox" onchange={(ev) => c.setCompleted(item, ev)} checked={completed} />
-            <label ondblclick={() => c.startEdit(item)}>{item.text}</label>
+            <label ondblclick={ev => c.startEdit(ev, item)}>{item.text}</label>
             <button onclick={() => c.removeItem(item)} class="destroy" />
         </div>
 
@@ -57,7 +53,7 @@ let Item = ({ item: item }: { item: Todo }) => {
 
 let Main = <main class="main">
     <div class="toggle-all-container">
-        <input id="toggle-all" class="toggle-all" type="checkbox" onchange={c.toggleAllItems} checked={m.allarecompleted} />
+        <input class="toggle-all" id="toggle-all" type="checkbox" onchange={c.toggleAllItems} checked={m.allarecompleted} />
         <label for="toggle-all">Mark all as complete</label>
     </div>
     <ul class="todo-list">
@@ -66,20 +62,13 @@ let Main = <main class="main">
     <Footer />
 </main>
 
-let TodoView = <Main />
-
 export let App = <body>
 
     <section class="todoapp">
         <Header />
-        <TodoView />
+        <Main />
     </section>
-    <footer class="info">
-        <p>Double-click to edit a todo</p>
-        <p>Written by <a href="http://snuup.github.io">snuup</a></p>
-        <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
-    </footer>
 
 </body>
 
-patch(document.body, App)
+patch(document.querySelector(".todoapp"), App)

@@ -1,6 +1,21 @@
 import jmxplugin from 'jmx-plugin'
 import checker from 'vite-plugin-checker'
 
+let mini = {
+    minify: 'terser',
+    terserOptions: {
+        compress: {
+            drop_console: true, // Remove console logs
+            passes: 2, // Increase the number of optimization passes
+        },
+        mangle: {
+            properties: {
+                regex: /.*/, // Mangle properties starting with _
+            },
+        },
+    }
+}
+
 export default {
     esbuild: {
         ignoreAnnotations: true,
@@ -12,19 +27,10 @@ export default {
     ],
     build: {
         target: 'esnext',
-        minify: 0,
-        // minify: 'terser',
-        // terserOptions: {
-        //     compress: {
-        //         drop_console: true, // Remove console logs
-        //         passes: 2, // Increase the number of optimization passes
-        //     },
-        //     mangle: {
-        //         properties: {
-        //             regex: /.*/, // Mangle properties starting with _
-        //         },
-        //     },
-        // },
+
+        //minify: 0,
+        ...mini,
+
         sourcemap: true,
         rollupOptions: {
             output: {

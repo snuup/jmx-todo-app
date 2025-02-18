@@ -29,14 +29,14 @@ class Controller {
         updateview('main')
     }
 
-    startEdit(item: Todo) {
+    startEdit(ev: Event, item: Todo) {
         m.editingItem = item
-        updateview()
+        updateview((ev.target as HTMLElement).closest("li"))
     }
 
-    endEdit() {
+    endEdit(ev: Event) {
         m.editingItem = null
-        updateview()
+        updateview((ev.target as HTMLElement).closest("li"))
     }
 
     keyUp(ev: KeyboardEventInput) {
@@ -52,12 +52,11 @@ class Controller {
                 } else {
                     m.items = m.items.filter(x => x !== i)
                 }
-                debugger
-                this.endEdit()
+                this.endEdit(ev)
                 break
 
             case "Escape":
-                this.endEdit()
+                this.endEdit(ev)
                 break
         }
     }
@@ -65,11 +64,14 @@ class Controller {
     setCompleted(item: Todo, ev): void {
         item.completed = (ev.target as HTMLInputElement).checked
         let li = (ev.target as HTMLElement).closest("li")
-        updateview(".footer") // allow array of selectors
-        updateview(li!) // tbvd: accept null
+        updateview(".footer", li)
     }
 
-    toggleAllItems() { }
+    toggleAllItems(ev: Event) {
+        const checked = (ev.target as HTMLInputElement).checked;
+        m.items.forEach(t => t.completed = checked)
+        updateview("ul")
+    }
 
     addItem(ev: KeyboardEvent) {
         if (ev.key === "Enter") {
@@ -87,16 +89,15 @@ class Controller {
                 target.value = ""
             }
         }
-        updateview()
+        updateview("ul")
     }
 
     removeItem(item: Todo) {
         m.items = m.items.filter(t => t.id != item.id)
-        updateview()
+        updateview("ul")
     }
 }
 
 export let c = new Controller()
 //export let c = loggedmethods(new Controller())
-
-mount({ updateview, c })
+//mount({ updateview, c })

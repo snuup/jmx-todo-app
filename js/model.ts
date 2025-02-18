@@ -38,6 +38,6 @@ class Model {
     get anycompleted() { return this.items.some(t => t.completed) }
 }
 
-export let m = new Model()
+export const m = new Model()
 
 //mount({ m })

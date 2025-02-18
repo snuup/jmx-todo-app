@@ -1,8 +1,6 @@
 import { updateview, rebind, mount, loggedmethods } from 'jmx'
 import { m, Todo } from './model'
 
-type KeyboardEventInput = KeyboardEvent & { target: HTMLInputElement }
-
 class Controller {
 
     constructor() {
@@ -11,7 +9,7 @@ class Controller {
     }
 
     setroute() {
-        let routes: Record<string, Filter> =
+        const routes: Record<string, Filter> =
         {
             "#/active": "active",
             "#/completed": "completed"
@@ -94,6 +92,6 @@ class Controller {
     }
 }
 
-export let c = new Controller()
+export const c = new Controller()
 //export let c = loggedmethods(new Controller())
 //mount({ updateview, c })

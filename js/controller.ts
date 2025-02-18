@@ -24,7 +24,7 @@ class Controller {
         updateview(".main")
     }
 
-    removeCompletedItems(ev: MouseEvent) {
+    removeCompletedItems() {
         m.items = m.items.filter(t => !t.completed)
         updateview('main')
     }
@@ -61,7 +61,7 @@ class Controller {
         }
     }
 
-    setCompleted(item: Todo, ev): void {
+    setCompleted(ev, item: Todo): void {
         item.completed = (ev.target as HTMLInputElement).checked
         let li = (ev.target as HTMLElement).closest("li")
         updateview(".footer", li)

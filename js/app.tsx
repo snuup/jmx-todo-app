@@ -29,7 +29,7 @@ let Item = ({ item: item }: { item: Todo }) => {
     return <li class={cc({ completed, editing })} >
 
         <div class="view">
-            <input class="toggle" type="checkbox" onchange={(ev) => c.setCompleted(item, ev)} checked={completed} />
+            <input class="toggle" type="checkbox" onchange={(ev) => c.setCompleted(ev, item)} checked={completed} />
             <label ondblclick={ev => c.startEdit(ev, item)}>{item.text}</label>
             <button onclick={() => c.removeItem(item)} class="destroy" />
         </div>
@@ -62,13 +62,10 @@ let Main = <main class="main">
     <Footer />
 </main>
 
-export let App = <body>
-
+export let App =
     <section class="todoapp">
         <Header />
         <Main />
     </section>
-
-</body>
 
 patch(document.querySelector(".todoapp"), App)

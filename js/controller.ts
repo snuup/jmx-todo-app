@@ -9,12 +9,10 @@ class Controller {
     }
 
     setroute() {
-        const routes: Record<string, Filter> =
-        {
-            "#/active": "active",
-            "#/completed": "completed"
-        }
-        m.filter = routes[window.location.hash] ?? "all"
+        m.filter = {
+            "#/active": <Filter>"active",
+            "#/completed": <Filter>"completed"
+        }[window.location.hash] ?? "all"
         updateview(".main")
     }
 
@@ -83,12 +81,10 @@ class Controller {
         updateview("ul")
     }
 
-    removeItem(item: Todo) {
+    delItem(item: Todo) {
         m.items = m.items.filter(t => t.id != item.id)
         updateview("ul")
     }
 }
 
 export const c = new Controller()
-//export let c = loggedmethods(new Controller())
-//mount({ updateview, c })

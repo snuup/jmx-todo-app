@@ -11,7 +11,7 @@ const Header = <header class="header">
 
 const Footer = <footer class="footer">
     <span class="todo-count">
-        <strong>{m.activecount}</strong> {m.activecount === 1 ? "item" : "items"} left
+        <strong>{m.activecount}</strong> {m.activecount == 1 ? "item" : "items"} left
     </span>
     <ul class="filters">
         <li><a class={cc({ selected: m.filter == "all" })} href="#/">All</a></li>
@@ -31,7 +31,7 @@ const Item = ({ item: item }: { item: Todo }) => {
         <div class="view">
             <input class="toggle" type="checkbox" onchange={(ev) => c.setCompleted(ev, item)} checked={completed} />
             <label ondblclick={ev => c.startEdit(ev, item)}>{item.text}</label>
-            <button onclick={() => c.removeItem(item)} class="destroy" />
+            <button onclick={() => c.delItem(item)} class="destroy" />
         </div>
 
         <When cond={editing}>

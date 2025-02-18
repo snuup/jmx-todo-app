@@ -1,7 +1,7 @@
 import jmxplugin from 'jmx-plugin'
 import checker from 'vite-plugin-checker'
 
-let mini = {
+const mini = {
     minify: 'terser',
     terserOptions: {
         compress: {
@@ -31,7 +31,7 @@ export default {
         //minify: 0,
         ...mini,
 
-        sourcemap: true,
+        sourcemap: false,
         rollupOptions: {
             output: {
                 entryFileNames: `app.js`,

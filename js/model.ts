@@ -1,5 +1,3 @@
-import { mount } from "jmx"
-
 type Id = string
 
 export type Todo = {
@@ -23,17 +21,14 @@ class Model {
         switch (m.filter) {
             case "all": return this.items
             case "active": return this.activeitems
-            case "completed": return this.completeditems
+            case "completed": return this.items.filter(t => t.completed)
         }
     }
 
-    get completeditems() { return this.items.filter(t => t.completed) }
     get activeitems() { return this.items.filter(t => !t.completed) }
     get activecount() { return this.activeitems.length }
-    get allarecompleted() { return m.items.every(c => c.completed) }
+    get allarecompleted() { return m.items.every(t => t.completed) }
     get anycompleted() { return this.items.some(t => t.completed) }
 }
 
 export const m = new Model()
-
-//mount({ m })

@@ -1,0 +1,121 @@
+2025-02-18T23:45:56.872Z eslint:cli CLI args: [ './js/*.tsx', '--debug' ]
+2025-02-18T23:45:56.873Z eslint:cli Using flat config? true
+2025-02-18T23:45:56.877Z eslint:cli Running on files
+2025-02-18T23:45:56.878Z eslint:eslint Using config loader LegacyConfigLoader
+2025-02-18T23:45:56.879Z eslint:eslint Using file patterns: ./js/*.tsx
+2025-02-18T23:45:56.879Z eslint:eslint Deleting cache file at A:\h\dev\jmx25\todoapp\.eslintcache
+2025-02-18T23:45:56.896Z eslint:config-loader Calculating config for file A:\h\dev\jmx25\todoapp\js\app.tsx
+2025-02-18T23:45:56.896Z eslint:config-loader Searching for eslint.config.js
+2025-02-18T23:45:56.898Z eslint:config-loader [Legacy]: Calculating config for A:\h\dev\jmx25\todoapp\js\app.tsx
+2025-02-18T23:45:56.898Z eslint:config-loader [Legacy]: Using config file A:\h\dev\jmx25\todoapp\eslint.config.mjs and base path A:\h\dev\jmx25\todoapp
+2025-02-18T23:45:56.898Z eslint:config-loader Calculating config array from config file A:\h\dev\jmx25\todoapp\eslint.config.mjs and base path A:\h\dev\jmx25\todoapp
+2025-02-18T23:45:56.899Z eslint:config-loader Loading config file A:\h\dev\jmx25\todoapp\eslint.config.mjs
+2025-02-18T23:45:56.899Z eslint:config-loader Loading config from A:\h\dev\jmx25\todoapp\eslint.config.mjs
+2025-02-18T23:45:56.899Z eslint:config-loader Config file URL is file:///A:/h/dev/jmx25/todoapp/eslint.config.mjs
+2025-02-18T23:45:57.417Z eslint:rules Loading rule 'consistent-return' (remaining=289)
+2025-02-18T23:45:57.436Z eslint:rules Loading rule 'dot-notation' (remaining=288)
+2025-02-18T23:45:57.440Z eslint:rules Loading rule 'init-declarations' (remaining=287)
+2025-02-18T23:45:57.441Z eslint:rules Loading rule 'max-params' (remaining=286)
+2025-02-18T23:45:57.460Z eslint:rules Loading rule 'no-dupe-class-members' (remaining=285)
+2025-02-18T23:45:57.464Z eslint:rules Loading rule 'no-empty-function' (remaining=284)
+2025-02-18T23:45:57.476Z eslint:rules Loading rule 'no-invalid-this' (remaining=283)
+2025-02-18T23:45:57.477Z eslint:rules Loading rule 'no-loop-func' (remaining=282)
+2025-02-18T23:45:57.478Z eslint:rules Loading rule 'no-loss-of-precision' (remaining=281)
+2025-02-18T23:45:57.482Z eslint:rules Loading rule 'no-magic-numbers' (remaining=280)
+2025-02-18T23:45:57.501Z eslint:rules Loading rule 'no-restricted-imports' (remaining=279)
+2025-02-18T23:45:57.555Z eslint:rules Loading rule 'no-unused-expressions' (remaining=278)
+2025-02-18T23:45:57.557Z eslint:rules Loading rule 'no-useless-constructor' (remaining=277)
+2025-02-18T23:45:57.565Z eslint:rules Loading rule 'prefer-destructuring' (remaining=276)
+2025-02-18T23:45:57.628Z eslint:config-loader Config file A:\h\dev\jmx25\todoapp\eslint.config.mjs is not empty
+2025-02-18T23:45:57.635Z eslint:rules Loading rule 'constructor-super' (remaining=275)
+2025-02-18T23:45:57.636Z eslint:rules Loading rule 'for-direction' (remaining=274)
+2025-02-18T23:45:57.637Z eslint:rules Loading rule 'getter-return' (remaining=273)
+2025-02-18T23:45:57.638Z eslint:rules Loading rule 'no-async-promise-executor' (remaining=272)
+2025-02-18T23:45:57.638Z eslint:rules Loading rule 'no-case-declarations' (remaining=271)
+2025-02-18T23:45:57.639Z eslint:rules Loading rule 'no-class-assign' (remaining=270)
+2025-02-18T23:45:57.639Z eslint:rules Loading rule 'no-compare-neg-zero' (remaining=269)
+2025-02-18T23:45:57.639Z eslint:rules Loading rule 'no-cond-assign' (remaining=268)
+2025-02-18T23:45:57.640Z eslint:rules Loading rule 'no-const-assign' (remaining=267)
+2025-02-18T23:45:57.640Z eslint:rules Loading rule 'no-constant-binary-expression' (remaining=266)
+2025-02-18T23:45:57.641Z eslint:rules Loading rule 'no-constant-condition' (remaining=265)
+2025-02-18T23:45:57.641Z eslint:rules Loading rule 'no-control-regex' (remaining=264)
+2025-02-18T23:45:57.642Z eslint:rules Loading rule 'no-debugger' (remaining=263)
+2025-02-18T23:45:57.642Z eslint:rules Loading rule 'no-delete-var' (remaining=262)
+2025-02-18T23:45:57.643Z eslint:rules Loading rule 'no-dupe-args' (remaining=261)
+2025-02-18T23:45:57.643Z eslint:rules Loading rule 'no-dupe-else-if' (remaining=260)
+2025-02-18T23:45:57.644Z eslint:rules Loading rule 'no-dupe-keys' (remaining=259)
+2025-02-18T23:45:57.644Z eslint:rules Loading rule 'no-duplicate-case' (remaining=258)
+2025-02-18T23:45:57.645Z eslint:rules Loading rule 'no-empty' (remaining=257)
+2025-02-18T23:45:57.645Z eslint:rules Loading rule 'no-empty-character-class' (remaining=256)
+2025-02-18T23:45:57.646Z eslint:rules Loading rule 'no-empty-pattern' (remaining=255)
+2025-02-18T23:45:57.646Z eslint:rules Loading rule 'no-empty-static-block' (remaining=254)
+2025-02-18T23:45:57.647Z eslint:rules Loading rule 'no-ex-assign' (remaining=253)
+2025-02-18T23:45:57.647Z eslint:rules Loading rule 'no-extra-boolean-cast' (remaining=252)
+2025-02-18T23:45:57.648Z eslint:rules Loading rule 'no-fallthrough' (remaining=251)
+2025-02-18T23:45:57.649Z eslint:rules Loading rule 'no-func-assign' (remaining=250)
+2025-02-18T23:45:57.649Z eslint:rules Loading rule 'no-global-assign' (remaining=249)
+2025-02-18T23:45:57.649Z eslint:rules Loading rule 'no-import-assign' (remaining=248)
+2025-02-18T23:45:57.650Z eslint:rules Loading rule 'no-invalid-regexp' (remaining=247)
+2025-02-18T23:45:57.651Z eslint:rules Loading rule 'no-irregular-whitespace' (remaining=246)
+2025-02-18T23:45:57.652Z eslint:rules Loading rule 'no-misleading-character-class' (remaining=245)
+2025-02-18T23:45:57.656Z eslint:rules Loading rule 'no-new-native-nonconstructor' (remaining=244)
+2025-02-18T23:45:57.657Z eslint:rules Loading rule 'no-nonoctal-decimal-escape' (remaining=243)
+2025-02-18T23:45:57.657Z eslint:rules Loading rule 'no-obj-calls' (remaining=242)
+2025-02-18T23:45:57.658Z eslint:rules Loading rule 'no-octal' (remaining=241)
+2025-02-18T23:45:57.658Z eslint:rules Loading rule 'no-prototype-builtins' (remaining=240)
+2025-02-18T23:45:57.658Z eslint:rules Loading rule 'no-redeclare' (remaining=239)
+2025-02-18T23:45:57.659Z eslint:rules Loading rule 'no-regex-spaces' (remaining=238)
+2025-02-18T23:45:57.660Z eslint:rules Loading rule 'no-self-assign' (remaining=237)
+2025-02-18T23:45:57.660Z eslint:rules Loading rule 'no-setter-return' (remaining=236)
+2025-02-18T23:45:57.661Z eslint:rules Loading rule 'no-shadow-restricted-names' (remaining=235)
+2025-02-18T23:45:57.661Z eslint:rules Loading rule 'no-sparse-arrays' (remaining=234)
+2025-02-18T23:45:57.662Z eslint:rules Loading rule 'no-this-before-super' (remaining=233)
+2025-02-18T23:45:57.662Z eslint:rules Loading rule 'no-undef' (remaining=232)
+2025-02-18T23:45:57.663Z eslint:rules Loading rule 'no-unexpected-multiline' (remaining=231)
+2025-02-18T23:45:57.663Z eslint:rules Loading rule 'no-unreachable' (remaining=230)
+2025-02-18T23:45:57.664Z eslint:rules Loading rule 'no-unsafe-finally' (remaining=229)
+2025-02-18T23:45:57.664Z eslint:rules Loading rule 'no-unsafe-negation' (remaining=228)
+2025-02-18T23:45:57.665Z eslint:rules Loading rule 'no-unsafe-optional-chaining' (remaining=227)
+2025-02-18T23:45:57.665Z eslint:rules Loading rule 'no-unused-labels' (remaining=226)
+2025-02-18T23:45:57.666Z eslint:rules Loading rule 'no-unused-private-class-members' (remaining=225)
+2025-02-18T23:45:57.666Z eslint:rules Loading rule 'no-unused-vars' (remaining=224)
+2025-02-18T23:45:57.667Z eslint:rules Loading rule 'no-useless-backreference' (remaining=223)
+2025-02-18T23:45:57.669Z eslint:rules Loading rule 'no-useless-catch' (remaining=222)
+2025-02-18T23:45:57.669Z eslint:rules Loading rule 'no-useless-escape' (remaining=221)
+2025-02-18T23:45:57.670Z eslint:rules Loading rule 'no-with' (remaining=220)
+2025-02-18T23:45:57.670Z eslint:rules Loading rule 'require-yield' (remaining=219)
+2025-02-18T23:45:57.671Z eslint:rules Loading rule 'use-isnan' (remaining=218)
+2025-02-18T23:45:57.671Z eslint:rules Loading rule 'valid-typeof' (remaining=217)
+2025-02-18T23:45:57.672Z eslint:rules Loading rule 'no-new-symbol' (remaining=216)
+2025-02-18T23:45:57.672Z eslint:rules Loading rule 'no-var' (remaining=215)
+2025-02-18T23:45:57.673Z eslint:rules Loading rule 'prefer-const' (remaining=214)
+2025-02-18T23:45:57.674Z eslint:rules Loading rule 'prefer-rest-params' (remaining=213)
+2025-02-18T23:45:57.674Z eslint:rules Loading rule 'prefer-spread' (remaining=212)
+2025-02-18T23:45:57.674Z eslint:rules Loading rule 'no-array-constructor' (remaining=211)
+2025-02-18T23:45:57.697Z eslint:config-loader Calculating config for file A:\h\dev\jmx25\todoapp\js\controller.ts
+2025-02-18T23:45:57.697Z eslint:config-loader [Legacy]: Calculating config for A:\h\dev\jmx25\todoapp\js\controller.ts
+2025-02-18T23:45:57.697Z eslint:config-loader [Legacy]: Using config file A:\h\dev\jmx25\todoapp\eslint.config.mjs and base path A:\h\dev\jmx25\todoapp
+2025-02-18T23:45:57.698Z eslint:config-loader Calculating config for file A:\h\dev\jmx25\todoapp\js\model.ts
+2025-02-18T23:45:57.698Z eslint:config-loader [Legacy]: Calculating config for A:\h\dev\jmx25\todoapp\js\model.ts
+2025-02-18T23:45:57.698Z eslint:config-loader [Legacy]: Using config file A:\h\dev\jmx25\todoapp\eslint.config.mjs and base path A:\h\dev\jmx25\todoapp
+2025-02-18T23:45:57.698Z eslint:eslint 1 files found in: 819ms
+2025-02-18T23:45:57.698Z eslint:config-loader Calculating config for file A:\h\dev\jmx25\todoapp\js\app.tsx
+2025-02-18T23:45:57.698Z eslint:config-loader [Legacy]: Calculating config for A:\h\dev\jmx25\todoapp\js\app.tsx
+2025-02-18T23:45:57.698Z eslint:config-loader [Legacy]: Using config file A:\h\dev\jmx25\todoapp\eslint.config.mjs and base path A:\h\dev\jmx25\todoapp
+2025-02-18T23:45:57.699Z eslint:eslint Lint A:\h\dev\jmx25\todoapp\js\app.tsx
+2025-02-18T23:45:57.699Z eslint:linter Linting code for A:\h\dev\jmx25\todoapp\js\app.tsx (pass 1)
+2025-02-18T23:45:57.700Z eslint:linter Verify
+2025-02-18T23:45:57.700Z eslint:linter With flat config: A:\h\dev\jmx25\todoapp\js\app.tsx
+2025-02-18T23:45:57.700Z eslint:languages:js Parsing: A:\h\dev\jmx25\todoapp\js\app.tsx
+2025-02-18T23:45:57.738Z eslint:languages:js Parsing successful: A:\h\dev\jmx25\todoapp\js\app.tsx
+2025-02-18T23:45:57.738Z eslint:languages:js Scope analysis: A:\h\dev\jmx25\todoapp\js\app.tsx
+2025-02-18T23:45:57.738Z eslint:languages:js Scope analysis successful: A:\h\dev\jmx25\todoapp\js\app.tsx
+2025-02-18T23:45:57.763Z eslint:linter Generating fixed text for A:\h\dev\jmx25\todoapp\js\app.tsx (pass 1)
+2025-02-18T23:45:57.763Z eslint:source-code-fixer Applying fixes
+2025-02-18T23:45:57.763Z eslint:source-code-fixer shouldFix parameter was false, not attempting fixes
+
+A:\h\dev\jmx25\todoapp\js\app.tsx
+  1:14  error  'jsx' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+

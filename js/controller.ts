@@ -1,5 +1,5 @@
 import { updateview, rebind } from 'jmx'
-import { m, Todo } from './model'
+import { mraw as m, Todo } from './model'
 
 class Controller {
 

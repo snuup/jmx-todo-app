@@ -42,7 +42,7 @@ const Item = ({ item: item }: { item: Todo }) => {
                     value={item.text}
                     onkeyup={c.keyUp}
                     onblur={c.endEdit}
-                    mounted={e => e.focus()}
+                    mounted={e => (e as HTMLElement).focus()}
                 />
 
             </div>

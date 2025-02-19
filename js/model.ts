@@ -1,3 +1,5 @@
+import { DeepReadonly } from "jmx/dist/types"
+
 type Id = string
 
 export type Todo = {
@@ -18,7 +20,7 @@ class Model {
     filter = "all" as Filter
 
     get filtereditems() {
-        switch (m.filter) {
+        switch (this.filter) {
             case "all": return this.items
             case "active": return this.activeitems
             case "completed": return this.items.filter(t => t.completed)
@@ -27,8 +29,9 @@ class Model {
 
     get activeitems() { return this.items.filter(t => !t.completed) }
     get activecount() { return this.activeitems.length }
-    get allarecompleted() { return m.items.every(t => t.completed) }
+    get allarecompleted() { return this.items.every(t => t.completed) }
     get anycompleted() { return this.items.some(t => t.completed) }
 }
 
-export const m = new Model()
+export const mraw = new Model()
+export const m = mraw as DeepReadonly<Model>

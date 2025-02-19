@@ -6,7 +6,7 @@ import 'todomvc-common/base.css'
 
 const Header = <header class="header">
     <h1>todos</h1>
-    <input class="new-todo" onkeydown={c.addItem} placeholder="What needs to be done?" autofocus />
+    <input class="new-todo" onkeydown={c.keydown} placeholder="What needs to be done?" autofocus />
 </header>
 
 const Footer = <footer class="footer">

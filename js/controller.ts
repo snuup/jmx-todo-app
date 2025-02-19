@@ -1,4 +1,4 @@
-import { updateview, rebind } from 'jmx'
+import { updateview, rebind, loggedmethods } from 'jmx'
 import { mraw as m, Todo } from './model'
 
 class Controller {
@@ -62,7 +62,7 @@ class Controller {
         updateview("ul")
     }
 
-    addItem(ev: KeyboardEvent) {
+    keydown(ev: KeyboardEvent) {
         if (ev.key === "Enter") {
             const target = ev.target as HTMLInputElement
 
@@ -87,4 +87,4 @@ class Controller {
     }
 }
 
-export const c = new Controller()
+export const c = loggedmethods(new Controller())

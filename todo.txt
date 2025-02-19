@@ -1,6 +1,0 @@
-- chalk - colored console
-
-% add the learn.js
-+ updateview filters
-+ jsx.d.ts - how to handle. how dies it react, vue?
-+ readonly model in view

@@ -1,5 +1,6 @@
-import { updateview, rebind, loggedmethods } from 'jmx'
+import { updateview, rebind, loggedmethods, loggedmethodsex, mount } from 'jmx'
 import { mraw as m, Todo } from './model'
+import chalk from 'chalk'
 
 class Controller {
 
@@ -87,4 +88,5 @@ class Controller {
     }
 }
 
-export const c = loggedmethods(new Controller())
+//export const c = loggedmethodsex(new Controller(), (name, args, result) => { console.log(chalk.whiteBright.bgGrey.bold(name), args, result) })
+export const c = new Controller()

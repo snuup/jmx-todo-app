@@ -9,10 +9,10 @@ class Controller {
     }
 
     setroute() {
-        m.filter = {
-            "#/active": <Filter>"active",
-            "#/completed": <Filter>"completed"
-        }[window.location.hash] ?? "all"
+        m.filter = ({
+            "#/active": "active",
+            "#/completed": "completed"
+        }[window.location.hash] ?? "all") as Filter
         updateview(".main")
     }
 
